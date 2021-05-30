@@ -4,14 +4,25 @@
     <title>
         {% block title %}{% endblock %}
     </title>
-    <link href="{% static "css/blog.css" %}" rel = "stylesheet">
+    <style>
+        .content {
+          border: 2px outset red;
+          background-color: lightblue;
+          text-align: center;
+        }
+        .sidebar {
+          border: 2px outset red;
+          background-color: lightblue;
+          text-align: center;
+        }
+        </style>
 </head>
 <body>
-   <div id='content'>
+   <div class='content'>
         {% block content %}
         {% endblock %}
    </div>
-   <div id="sidebar">
+   <div class="sidebar">
        <h2>My blog</h2>
        <p>This is my first blog.</p>
    </div>
